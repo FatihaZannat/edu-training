@@ -1,0 +1,77 @@
+{
+    "events": [
+      {
+        "id": 1,
+        "picture": "https://i.ibb.co/ypf0Xfh/minimal-geometric-charity-event-youtube-thumbnail-23-2149524608.jpg",
+        "name": "Introduction to Machine Learning Workshop",
+        "date": "2023-02-15",
+        "location": "City Conference Center",
+        "description": "A hands-on workshop for beginners to learn the basics of machine learning.",
+        "organizer": "Tech Learning Institute"
+      },
+      {
+        "id": 2,
+        "picture": "https://example.com/event2.jpg",
+        "name": "Web Development Bootcamp",
+        "date": "2023-03-10",
+        "location": "Tech Hub Academy",
+        "description": "An intensive bootcamp covering modern web development technologies and best practices.",
+        "organizer": "Code Masters"
+      },
+      {
+        "id": 3,
+        "picture": "https://example.com/event3.jpg",
+        "name": "Data Science Symposium",
+        "date": "2023-04-25",
+        "location": "Data Analytics Convention Center",
+        "description": "A one-day symposium featuring talks and workshops on the latest trends in data science.",
+        "organizer": "Data Insights Society"
+      },
+      {
+        "id": 4,
+        "picture": "https://example.com/event4.jpg",
+        "name": "Leadership Training Seminar",
+        "date": "2023-05-18",
+        "location": "Executive Training Institute",
+        "description": "A seminar focused on developing leadership skills for professionals at all levels.",
+        "organizer": "Leadership Dynamics"
+      },
+      {
+        "id": 5,
+        "picture": "https://example.com/event5.jpg",
+        "name": "Digital Marketing Masterclass",
+        "date": "2023-06-10",
+        "location": "Marketing Institute Headquarters",
+        "description": "A masterclass covering advanced digital marketing strategies and tools.",
+        "organizer": "Digital Marketing Pros"
+      },
+      {
+        "id": 6,
+        "picture": "https://example.com/event6.jpg",
+        "name": "UX/UI Design Workshop",
+        "date": "2023-07-15",
+        "location": "Design Studio Loft",
+        "description": "Hands-on workshop for designers to enhance their UX/UI skills.",
+        "organizer": "Design Innovators"
+      },
+      {
+        "id": 7,
+        "picture": "https://example.com/event7.jpg",
+        "name": "Blockchain Technology Conference",
+        "date": "2023-08-22",
+        "location": "Tech Innovations Center",
+        "description": "Explore the latest developments in blockchain technology with industry experts.",
+        "organizer": "Blockchain Solutions Group"
+      },
+      {
+        "id": 8,
+        "picture": "https://example.com/event8.jpg",
+        "name": "Artificial Intelligence Summit",
+        "date": "2023-09-30",
+        "location": "AI Hub Convention Hall",
+        "description": "A summit bringing together AI enthusiasts and experts to discuss advancements in the field.",
+        "organizer": "AI Futures Association"
+      }
+    ]
+  }
+  
