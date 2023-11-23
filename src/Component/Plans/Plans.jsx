@@ -1,22 +1,22 @@
-
-const Plans = ({price}) => {
+import { MdOutlineDone } from "react-icons/md";
+const Plans = ({price,quality}) => {
     return (
         <div>
-            <h1 className="3xl">Plans & Pricings</h1>
+            
 
-            <div>
-                <h1>basic</h1>
-                <h1>$ {price}</h1>
-                <p>per month</p>
+            <div className="card bg-gray-50 gap-2 m-1 w-80">
+                <h1 className="text-center text-2xl my-3">{quality}</h1>
+                <h1 className="text-center text-4xl my-3">$ {price}</h1>
+                <p className="text-center text-sm text-gray-200 my-3">per month</p>
                 <hr />
                 <ul>
-                    <li>visit 1 event</li>
-                    <li>visit 1 event</li>
-                    <li>visit 1 event</li>
-                    <li>visit 1 event</li>
-                    <li>visit 1 event</li>
+                <div className="flex justify-center mb-4 gap-2 items-center">  <MdOutlineDone/>  <li>visit 1 event</li></div>
+                <div className="flex justify-center mb-4 gap-2 items-center">  <MdOutlineDone/>  <li>2 tickets included</li></div>
+                <div className="flex justify-center mb-4  gap-2 items-center">  <MdOutlineDone/>  <li>meet our speakers</li></div>
+                <div className="flex justify-center mb-4 gap-2 items-center">  <MdOutlineDone/>  <li>free online account</li></div>
+                <div className="flex justify-center mb-4 gap-2 items-center">  <MdOutlineDone/>  <li>free entrance</li></div>
                 </ul>
-                <button>shop now</button>
+                <button className="btn mt-10">shop now</button>
             </div>
         </div>
     );

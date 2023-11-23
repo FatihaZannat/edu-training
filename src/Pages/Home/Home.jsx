@@ -13,9 +13,12 @@ const Home = () => {
                 </div>
                 
             </div>
-            <div className='flex'>
-            <Plans price={10}></Plans>
-            <Plans price={345}></Plans>
+            <h1 className="text-5xl text-center m-12">Plans & Pricings</h1>
+            <div className='flex justify-around '>
+            <Plans quality={'basic'} price={90} ></Plans>
+            <Plans quality={'premium'} price={53} ></Plans>
+            <Plans quality={'advanced'} price={10} ></Plans>
+            <Plans quality={'DEVELOPER'} price={35}></Plans>
             </div>
         </>
         
