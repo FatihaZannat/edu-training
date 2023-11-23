@@ -8,29 +8,35 @@ const googleProvider = new GoogleAuthProvider
 
 const Provider = ({ children }) => {
     const [user, setUser] = useState(null)
+    const [loding , setLoding] = useState(true)
 
     // email password authenticatio
     const createEmailPass = (email, password) => {
+        setLoding(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     // google authentication
 
     const createGoogleAuth = () => {
+        setLoding(true)
         return signInWithPopup(auth, googleProvider)
     }
     // login
     const existingUserSignIn = (email, password) =>{
+        setLoding(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
     // logOut
         const logOutUser = () => {
+            setLoding(true)
          return   signOut(auth)
         }
     // manage users
     useEffect(() => {
        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser)
+            setLoding(false)
             console.log(currentUser);
         })
         return ()=>{
@@ -42,6 +48,7 @@ const Provider = ({ children }) => {
     const contextValue = {
         Swal,
         user,
+        loding,
         createEmailPass,
         createGoogleAuth,
         existingUserSignIn,

@@ -6,7 +6,7 @@ import Registation from "../Pages/Registation/Registation";
 import Login from "../Pages/Login/Login";
 import Services from "../Pages/Services/Services";
 import PrivateRoute from "./PrivateRoute";
-import Details from "../Component/Services/Details/Details";
+import Details from "../Component/Details/Details";
 
 const router = createBrowserRouter([
     {

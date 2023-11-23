@@ -1,9 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link,  useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/Provider";
 
 
 const Login = () => {
+  const [notMatch, setNotMatch] = useState('')
   const { existingUserSignIn, createGoogleAuth, Swal } = useContext(AuthContext)
   const navigate = useNavigate()
 
@@ -11,6 +12,8 @@ const Login = () => {
     e.preventDefault()
     const email = e.target.email.value
     const password = e.target.password.value
+
+
 
     existingUserSignIn(email, password)
       .then(res => {
@@ -23,8 +26,11 @@ const Login = () => {
         console.log(res.user)
       })
 
-      .then(err => console.log(err.message))
+      .catch(() => {
+        setNotMatch('invallid password')
+      })
   }
+  console.log(notMatch);
   const handleGoogleSignIn = () => {
     createGoogleAuth()
       .then(res => {
@@ -35,7 +41,8 @@ const Login = () => {
         })
         console.log(res.user)
       })
-      .then(err => console.log(err.message))
+      .catch(err => {
+        console.log(err.message)})
   }
 
 
@@ -62,6 +69,7 @@ const Login = () => {
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
               </label>
+         <p>{notMatch}</p>
             </div>
             <div className="form-control mt-6">
               <button className="btn btn-primary">Login</button>

@@ -1,10 +1,11 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/Provider";
 
 const Registation = () => {
-    const {createEmailPass} = useContext(AuthContext)
-   
+  const [data , setData] = useState('')
+    const {createEmailPass, Swal} = useContext(AuthContext)
+   const navigate = useNavigate()
     const handleRegistration = (e) => {
         e.preventDefault()
        const email = e.target.email.value
@@ -12,9 +13,26 @@ const Registation = () => {
        const name = e.target.name.value
        console.log(email, password, name);
 
+// validation
+
+      if(password.length < 6){
+     return   setData('Password should be at least 6 characters')
+        // console.log('pass to sortPassword should be at least 6 characters');
+      }
+     else if(!/([A-Z])([#?!@$%^&*-])/.test(password)){
+     return setData('in password must have one uper case and special character')
+     }
        createEmailPass(email,password)
-       .then(res => console.log(res.user))
-       .then(err => console.log(err.message))
+        .then(res => {
+          Swal.fire({
+            text: 'login done',
+            icon: 'success',
+            confirmButtonText: 'ok'
+          })
+        navigate('/')
+        console.log(res.user);
+       })
+       .catch(err => console.log(err.message))
     }
   
     return (
@@ -44,7 +62,7 @@ const Registation = () => {
                 </label>
                 <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                  <p href="#" className="label-text-alt link link-hover text-red-500">* {data}</p>
                 </label>
               </div>
               <div className="form-control mt-6">
