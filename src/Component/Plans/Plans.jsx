@@ -1,4 +1,5 @@
 import { MdOutlineDone } from "react-icons/md";
+import PropTypes from 'prop-types';
 const Plans = ({price,quality}) => {
     return (
         <div>
@@ -22,4 +23,8 @@ const Plans = ({price,quality}) => {
     );
 };
 
+Plans.propTypes = {
+    price: PropTypes.number,
+    quality : PropTypes.string
+}
 export default Plans;

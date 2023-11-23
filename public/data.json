@@ -11,7 +11,7 @@
       },
       {
         "id": 2,
-        "picture": "https://example.com/event2.jpg",
+        "picture": "https://i.ibb.co/kSWBc1K/istockphoto-1408304018-1024x1024.jpg",
         "name": "Web Development Bootcamp",
         "date": "2023-03-10",
         "location": "Tech Hub Academy",
@@ -20,7 +20,7 @@
       },
       {
         "id": 3,
-        "picture": "https://example.com/event3.jpg",
+        "picture": "https://i.ibb.co/qFkMwpk/rear-view-asian-audience-joining-listening-speaker-talking-stage-seminar-41418-3963.jpg",
         "name": "Data Science Symposium",
         "date": "2023-04-25",
         "location": "Data Analytics Convention Center",
